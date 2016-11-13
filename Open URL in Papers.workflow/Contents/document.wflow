@@ -20,105 +20,6 @@
 					<key>Optional</key>
 					<true/>
 					<key>Types</key>
-					<array/>
-				</dict>
-				<key>AMActionVersion</key>
-				<string>1.1.1</string>
-				<key>AMApplication</key>
-				<array>
-					<string>Finder</string>
-				</array>
-				<key>AMParameterProperties</key>
-				<dict>
-					<key>appPath</key>
-					<dict>
-						<key>isPathPopUp</key>
-						<true/>
-						<key>variableUUIDsInMenu</key>
-						<array/>
-					</dict>
-				</dict>
-				<key>AMProvides</key>
-				<dict>
-					<key>Container</key>
-					<string>List</string>
-					<key>Types</key>
-					<array/>
-				</dict>
-				<key>ActionBundlePath</key>
-				<string>/System/Library/Automator/Launch Application.action</string>
-				<key>ActionName</key>
-				<string>Launch Application</string>
-				<key>ActionParameters</key>
-				<dict>
-					<key>appPath</key>
-					<string>/Applications/Papers.app</string>
-				</dict>
-				<key>BundleIdentifier</key>
-				<string>com.apple.Automator.OpenApplication</string>
-				<key>CFBundleVersion</key>
-				<string>1.1.1</string>
-				<key>CanShowSelectedItemsWhenRun</key>
-				<true/>
-				<key>CanShowWhenRun</key>
-				<true/>
-				<key>Category</key>
-				<array>
-					<string>AMCategoryUtilities</string>
-				</array>
-				<key>Class Name</key>
-				<string>AMLaunchApplicationAction</string>
-				<key>InputUUID</key>
-				<string>424EEDB6-C798-434F-A24A-9F929805C351</string>
-				<key>Keywords</key>
-				<array>
-					<string>File</string>
-					<string>Open</string>
-				</array>
-				<key>OutputUUID</key>
-				<string>CDE37758-47EC-4D75-94F1-F714DC4219AD</string>
-				<key>UUID</key>
-				<string>150EB038-E6AC-4BB7-9980-8447631A687A</string>
-				<key>UnlocalizedApplications</key>
-				<array>
-					<string>Finder</string>
-				</array>
-				<key>arguments</key>
-				<dict>
-					<key>0</key>
-					<dict>
-						<key>default value</key>
-						<string>/Applications/Contacts.app</string>
-						<key>name</key>
-						<string>appPath</string>
-						<key>required</key>
-						<string>0</string>
-						<key>type</key>
-						<string>0</string>
-						<key>uuid</key>
-						<string>0</string>
-					</dict>
-				</dict>
-				<key>isViewVisible</key>
-				<true/>
-				<key>location</key>
-				<string>309.000000:173.000000</string>
-				<key>nibPath</key>
-				<string>/System/Library/Automator/Launch Application.action/Contents/Resources/Base.lproj/main.nib</string>
-			</dict>
-			<key>isViewVisible</key>
-			<true/>
-		</dict>
-		<dict>
-			<key>action</key>
-			<dict>
-				<key>AMAccepts</key>
-				<dict>
-					<key>Container</key>
-					<string>List</string>
-					<key>Optional</key>
-					<true/>
-					<key>Types</key>
 					<array>
 						<string>com.apple.applescript.object</string>
 					</array>
@@ -150,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}		tell application "Papers"		open location (input as string)	end tell		return inputend run</string>
+					<string>on run {input, parameters}	tell application "Papers" to activate	tell application "Papers" to open location (input as string)	return inputend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -204,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:450.000000</string>
+				<string>309.000000:284.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -213,15 +114,7 @@ end run</string>
 		</dict>
 	</array>
 	<key>connectors</key>
-	<dict>
-		<key>CE440B11-EE17-4703-BB47-8CB21ADCE077</key>
-		<dict>
-			<key>from</key>
-			<string>150EB038-E6AC-4BB7-9980-8447631A687A - 150EB038-E6AC-4BB7-9980-8447631A687A</string>
-			<key>to</key>
-			<string>C979D5FE-9C89-457C-B8F9-6492A8870A64 - C979D5FE-9C89-457C-B8F9-6492A8870A64</string>
-		</dict>
-	</dict>
+	<dict/>
 	<key>workflowMetaData</key>
 	<dict>
 		<key>serviceInputTypeIdentifier</key>
